@@ -35,4 +35,16 @@ app.post("/qarshicafe/hs/mzakaz/:id", (req, res) => {
   return mockReceipt;
 });
 
+app.setNotFoundHandler((request, reply) => {
+  console.log({
+    method: request.method,
+    url: request.url,
+    body: request.body,
+  });
+  reply.code(404).send({
+    error: "Not Found",
+    message: `The route ${request.method} ${request.url} does not exist`,
+  });
+});
+
 export default app;
