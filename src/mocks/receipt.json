@@ -6,6 +6,7 @@
       "tableId": "r1",
       "table": "Table 1",
       "author": "John Doe",
+      "authorId": "John Doe",
       "number": "r1",
       "version": "1",
       "items": [

@@ -2,7 +2,9 @@ import cors from "@fastify/cors";
 import fastify from "fastify";
 import mockAuth from "./mocks/auth.json";
 import mockMenu from "./mocks/menus.json";
+import mockOneReceipt from "./mocks/one-receipt.json";
 import mockReceipt from "./mocks/receipt.json";
+
 const app = fastify();
 app.register(cors, {
   // put your options here
@@ -25,6 +27,11 @@ app.post("/qarshicafe/hs/mzakaz/menu", (req, res) => {
 });
 
 app.post("/qarshicafe/hs/mzakaz/:id", (req, res) => {
+  const data = JSON.parse(req.body as string) as { id: string };
+  if (data.id) {
+    return mockOneReceipt;
+  }
+
   return mockReceipt;
 });
 
