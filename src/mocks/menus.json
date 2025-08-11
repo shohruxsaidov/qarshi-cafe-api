@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "id": "1",
+      "name": "Coffee",
+      "price": 15000,
+      "category": "Drinks"
+    },
+    {
+      "id": "2",
+      "name": "Sandwich",
+      "price": 25000,
+      "category": "Food"
+    }
+  ]
+}

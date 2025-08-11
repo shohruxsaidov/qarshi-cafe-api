@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "id": "r1",
+      "items": [{ "name": "Coffee", "qty": 2, "price": 15000 }],
+      "total": 30000,
+      "date": "2025-08-11T10:00:00"
+    }
+  ]
+}
