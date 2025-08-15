@@ -37,6 +37,15 @@ app.post("/qarshicafe/hs/mzakaz/receipt", (req, res) => {
   return mockReceipt;
 });
 
+app.post("/qarshicafe/hs/mzakaz/sale", (req, res) => {
+  const data = JSON.parse(req.body as string) as { id: string };
+  if (data.id) {
+    return mockOneReceipt;
+  }
+
+  return mockReceipt;
+});
+
 app.post("/qarshicafe/hs/mzakaz/preschet", (req, res) => {
   const src = import.meta.dirname;
   const pdfPath = path.join(process.cwd(), "src/mocks/receipt.pdf");
