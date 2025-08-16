@@ -38,7 +38,10 @@ app.post("/qarshicafe/hs/mzakaz/receipt", (req, res) => {
 });
 
 app.post("/qarshicafe/hs/mzakaz/sale", (req, res) => {
-  const data = JSON.parse(req.body as string) as { id: string };
+  const data = JSON.parse(req.body as string) as { id: string; data?: any };
+  if (data.data) {
+    return { ok: true, result: true };
+  }
   if (data.id) {
     return mockOneReceipt;
   }
