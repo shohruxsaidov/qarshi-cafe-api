@@ -29,7 +29,8 @@
         "price": 15000,
         "total": 1,
         "date": 1754897340272,
-        "unit": "pcs"
+        "unit": "pcs",
+        "date_field": "01.08.2025 0:00:00"
       }
     ]
   }
